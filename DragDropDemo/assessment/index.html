@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body class="container">
+	<div class="containerDiv">
+		<div id="draggedDiv" class="draggedDiv" ondragover="myApp.dragOver(event)" ondrop="myApp.dropOnDraggedDiv(event)"></div>
+
+		<label for="amount">Amount:</label>
+		<input type="number" name="amount" id="amount" class="form-control" oninput="myApp.amountChange(event)"/>
+		<br/>
+
+		<label for="price">Price:</label>
+		<input type="number" name="price" id="price" class="form-control"/>
+		<br/>
+
+		<label for="tax">Tax:</label>
+		<input type="number" name="tax" id="tax" class="form-control"/>
+		<br/>
+
+		<label for="total">Total:</label>
+		<input type="number" name="total" id="total" class="form-control"/>
+	</div>
+	<div class="containerDiv" ondragover="myApp.dragOver(event)" ondrop="myApp.dropOnContainerDiv(event)">
+		<div id="price1" class="priceBlock" draggable="true" ondragstart="myApp.dragStart(event)" ondragend="myApp.dragEnd(event)">10,000</div>
+		<div id="price2" class="priceBlock" draggable="true" ondragstart="myApp.dragStart(event)" ondragend="myApp.dragEnd(event)">25,000</div>
+		<div id="price3" class="priceBlock" draggable="true" ondragstart="myApp.dragStart(event)" ondragend="myApp.dragEnd(event)">30,000</div>
+	</div>
+	<script type="text/javascript" src="js/dragdropHandler.js"></script>
+</body>
+</html>
