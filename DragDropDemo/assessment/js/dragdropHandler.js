@@ -44,8 +44,9 @@ app.prototype= {
 		var taxInput= document.getElementById("tax");
 		var totInput= document.getElementById("total");
 
-		var amount= Number(amtInput.value);
-		var tax= totPrice * (125/1000)
+		var amount= Number((amtInput.value).replace(",",""));
+		var tax= totPrice * (125/1000);
+		amtInput.value= amount.toLocaleString();
 		priceInput.value= totPrice.toFixed(2);
 		taxInput.value= tax;
 		totInput.value= amount+ totPrice + tax;
