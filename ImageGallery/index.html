@@ -6,15 +6,16 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-	<div class="container">
+	<div class="container myapp">
+		<h2 class="text-center">Image Gallery Demo</h2>
 		<div class="row">
-			<button class="btn button previousBtn col-sm-2"><</button>
+			<button class="btn button previousBtn col-sm-2" onclick="myApp.handlePreviousBtn(event)"><</button>
 			
-			<div class="parentWrapper col-sm-8">
+			<div class="parentWrapper col-sm-8" onmousedown="myApp.handleSliderMouseDown(event)">
 				<div id="sliderWrapper"></div>
 			</div>
 		
-			<button class="btn button nextBtn col-sm-2">></button>
+			<button class="btn button nextBtn col-sm-2" onclick="myApp.handleNextBtn(event)">></button>
 		</div>
 		
 	</div>
