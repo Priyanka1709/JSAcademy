@@ -2,13 +2,14 @@ function app(){
 	this.locationBox= document.getElementById('location');
 
 	this.username= document.getElementById('username');
+
+	this.remCheckbox= document.getElementById('remCheckbox');
 }
 
 app.prototype={
 	constructor: app,
 
 	initialize: function(){
-		debugger;
 		var username;
 		if(username= localStorage.getItem("username")){
 			this.username.value= username;
@@ -33,13 +34,17 @@ app.prototype={
 		}
 	},
 
-	updateLocalStorage: function(e){
-		if(e.target.checked){
+	updateLocalStorage: function(){
+		if(this.remCheckbox.checked){
 			localStorage.setItem("username", this.username.value);
 		}
 		else{
 			localStorage.removeItem("username");
 		}
+	},
+
+	submitForm: function(e){
+		this.updateLocalStorage();
 	}
 }
 
