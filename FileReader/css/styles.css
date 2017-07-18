@@ -1,0 +1,10 @@
+.preview{
+	width: 400px;
+	height: 400px;
+	overflow:auto;
+}
+
+img{
+	max-width:400px;
+	max-height:400px;
+}

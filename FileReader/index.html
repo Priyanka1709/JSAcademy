@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body class="container">
+	<form>
+		<label>Choose file to upload:
+			<input type="file" id="fileUpload" class="form-control" onchange="myApp.previewFile(event)"/>
+		</label>
+		<br/><br/>
+		<button class="btn btn-primary" onclick=myApp.deleteFile(event)>Delete</button>
+	</form>
+	<br/>
+	<label>Preview:</label>
+	<div id="preview" class="preview panel panel-default"></div>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
