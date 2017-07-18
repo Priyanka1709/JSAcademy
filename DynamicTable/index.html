@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic Table</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+				<label >
+					Number of rows:
+				</label>
+			</div>
+			<div class="col-sm-1">
+				<input id="rowInput" type="number" min="0" max="10" value="0" step="1" class="form-control" oninput="myApp.updateInput(event,'rowInput','rowSlider')"/>
+			</div>
+			<div class="col-sm-2">
+				<input id="rowSlider" type="range" min="0" max="10" value="0" step="1" class="form-control col-sm-4" onchange="myApp.updateInput(event,'rowSlider','rowInput')"/>
+			</div>		
+		</div>
+		
+		<br/>
+		<div class="row">
+			<div class="col-sm-2">
+				<label >
+					Number of columns:
+				</label>
+			</div>
+			<div class="col-sm-1">
+				<input id="colInput" type="number" min="0" max="10" value="0" step="1" class="form-control" oninput="myApp.updateInput(event,'colInput','colSlider')"/>
+			</div>
+			<div class="col-sm-2">
+				<input id="colSlider" type="range" min="0" max="10" value="0" step="1" class="form-control col-sm-4" onchange="myApp.updateInput(event,'colSlider','colInput')"/>
+			</div>		
+		</div>
+		<br/>
+		<div id="table"></div>
+	</div>
+	
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

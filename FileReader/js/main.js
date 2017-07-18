@@ -38,6 +38,24 @@ app.prototype= {
 
 	deleteFile: function(e){
 		this.fileUpload.value="";
+	},
+
+	handleDragOver: function(e){
+		e.preventDefault();
+		e.dataTransfer.dropEffect= "copy";
+		e.target.classList.add("dragOver");
+	},
+
+	handleDragLeave: function(e){
+		e.preventDefault();
+		e.target.classList.remove("dragOver");
+	},
+
+	handleFileDrop: function(e){
+		e.preventDefault();
+
+		this.fileUpload.files= e.dataTransfer.files;
+		e.target.classList.remove("dragOver");
 	}
 }
 

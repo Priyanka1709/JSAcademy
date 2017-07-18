@@ -8,6 +8,7 @@
 	<form>
 		<label>Choose file to upload:
 			<input type="file" id="fileUpload" class="form-control" onchange="myApp.previewFile(event)"/>
+			<div id="fileDrop" class="panel panel-default" ondragover="myApp.handleDragOver(event)" ondragleave="myApp.handleDragLeave(event)" ondrop="myApp.handleFileDrop(event)">or drop files here</div>
 		</label>
 		<br/><br/>
 		<button class="btn btn-primary" onclick=myApp.deleteFile(event)>Delete</button>

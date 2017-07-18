@@ -8,3 +8,11 @@ img{
 	max-width:400px;
 	max-height:400px;
 }
+#fileDrop{
+	width:400px;
+	height:100px;
+	text-align: center;
+}
+#fileDrop.dragOver{
+	background-color: #ddd;
+}
