@@ -1,3 +1,5 @@
+"use strict";
+
 Function.prototype.curry= function(n){
 	var func= this;
 
