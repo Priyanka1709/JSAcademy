@@ -1,9 +1,10 @@
-Object.prototype.clone =function(depthArr){
+Object.prototype.customClone =function(depthArr){
 
 	var newObj= JSON.parse(JSON.stringify(this));
 	var newObjRef= newObj;
 	var prevRef= this;
-	for(var i=0; i< (depthArr.length -1);i++){
+
+	for(var i=0; i< depthArr.length;i++){
 		if(prevRef[depthArr[i]]){
 			prevRef= prevRef[depthArr[i]];
 			newObjRef= newObjRef[depthArr[i]];
@@ -20,9 +21,9 @@ Object.prototype.clone =function(depthArr){
 	return newObj;
 }
 
-Object.prototype.assign= function(path, value, write){
+Object.prototype.customAssign= function(path, value, write){
 	var decodedPath= path.split("/");
-	var newObj= this.clone(decodedPath);
+	var newObj= this.customClone(decodedPath);
 	var prevRef= newObj;
 	var currPath;
 
@@ -53,7 +54,7 @@ Object.prototype.assign= function(path, value, write){
 }
 
 var initialState= {};
-initialState= initialState.assign("a/b/c",2);
-initialState= initialState.assign("a/b/d",3);
-initialState= initialState.assign("a/e",13);
-initialState= initialState.assign("a/f",18);
+initialState= initialState.customAssign("a/b/c",2);
+initialState= initialState.customAssign("a/b/d",3);
+initialState= initialState.customAssign("a/e",13);
+initialState= initialState.customAssign("a/f",18);
