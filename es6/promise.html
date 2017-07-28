@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// function doAsync(){
+		// 	let p= new Promise(function(resolve, reject){
+		// 		console.log("inside promise: ");
+		// 		setTimeout(function(){
+		// 			console.log("rejecting: ");
+		// 			reject();
+		// 		},2000);
+		// 	});
+		// 	return p;
+		// }
+		// console.log("sync line");
+		// let promise= doAsync().then(function(){
+		// 		console.log("Promise resolved");
+		// 	}, function(){
+		// 		console.log("Promise rejected");
+		// 	}
+		// );
+
+		// doAsync().catch(function(e){
+		// 	console.log("Error",e);
+		// })
+
+		//Promise all and race
+		let time= new Date().getTime();
+		let p1= new Promise(function(resolve, reject){
+			setTimeout(function(){
+				console.log("resolving p1: ");
+				resolve();
+			},2000);
+		});
+
+		let p2= new Promise(function(resolve, reject){
+			setTimeout(function(){
+				console.log("resolving p2: ");
+				resolve();
+			},5000);
+		});
+
+		// Promise.all([p1,p2]).then(function(){
+		// 		console.log("Promise resolved after ", ((new Date().getTime()) -time));
+		// 	}, function(e){
+		// 		console.log("Promise rejected after ", ((new Date().getTime()) -time));
+		// 	}
+		// );
+
+		Promise.race([p1,p2]).then(function(){
+				console.log("Promise resolved after ", ((new Date().getTime()) -time));
+			}, function(e){
+				console.log("Promise rejected after ", ((new Date().getTime()) -time));
+			}
+		);
+
+		//Chaining
+		// let p1= new Promise(function(resolve, reject){
+		// 	setTimeout(function(){
+		// 		console.log("resolving p1: ");
+		// 		resolve("test1");
+		// 	},2000);
+		// });
+
+		// let p2= new Promise(function(resolve, reject){
+		// 	setTimeout(function(){
+		// 		console.log("resolving p2: ");
+		// 		resolve("test2");
+		// 	},5000);
+		// });
+
+		// p1.then(function(value){
+		// 	console.log("p1 resolved with value", value);
+		// 	return p2;
+		// })
+		// .then(function(value){
+		// 	console.log("p2 resolved with value", value);
+		// });
+
+
+	</script>
+</body>
+</html>

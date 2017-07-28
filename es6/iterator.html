@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+
+		let myObj=[10,4,6,5,2,3,7];
+
+		myObj[Symbol.iterator]= function(condition1, condition2){
+			var nextIndex=0;
+			return{
+				next(){
+					if(condition1(myObj[nextIndex])){
+							debugger;
+							return condition2(nextIndex) ? { value: myObj[nextIndex++], done: false}: {done: true}
+					}
+					else{
+						nextIndex++;
+						return this.next();
+					}
+					
+
+				}
+			}
+		}
+
+		function condition1(i){
+			return i%2 != 0;
+		}
+
+		function condition2(i){
+			return i < 5;
+		}
+
+		let it= myObj[Symbol.iterator](condition1, condition2);
+	
+		console.log(it.next());
+		console.log(it.next());
+		console.log(it.next());
+		console.log(it.next());
+
+	</script>
+</body>
+</html>

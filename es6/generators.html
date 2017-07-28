@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		//Even/ Odd nos
+		// function condition1(i){
+		// 	return i%2 == 0;
+		// }
+
+		// function condition2(i){
+		// 	return i < 10;
+		// }
+
+		// function* number(c1, c2){
+		// 	var index = 0;
+		// 	while(c2(index)){
+		// 		if(c1(index)){
+		// 			yield index;
+		// 		}
+		// 		index++;
+		// 	}
+		// }
+		// let it= number(condition1,condition2);
+		// console.log(it.next());
+		// console.log(it.next());
+		// console.log(it.next());
+		// console.log(it.next());
+		// console.log(it.next());
+		// console.log(it.next());
+
+		//Option 1
+		// function* process(){
+		// 	yield 8000;
+		// 	yield 4000;
+		// }
+
+		// let it= process();
+
+		// console.log(it.next());
+		// console.log(it.next());
+		// console.log(it.next());
+
+		//Option 2
+		// function* process(){
+		// 	let result= yield;
+		// 	console.log(`result ${result}`);
+		// }
+		// let it= process();
+		// it.next();
+		// it.next(100);
+		// it.next(400);
+
+		//yield array
+		// function* process(){
+		// 	yield 42;
+		// 	yield* [1,2,3]; //spreads the array over multiple yields
+		// }
+
+		// let it= process();
+
+		// console.log(it.next());
+		// console.log(it.next());
+		// console.log(it.next());
+		// console.log(it.next());
+		// console.log(it.next());
+		// console.log(it.next());
+
+		//throw error
+		function* process(){
+			try{
+				yield 9000;
+				yield 9001;	
+				yield 9002;	
+			}
+			catch(e){
+				console.log("Error: ",e);
+			}
+			
+		}
+
+		let it= process();
+
+		console.log(it.next());
+		console.log(it.return());
+		console.log(it.throw());
+		console.log(it.next());
+
+	</script>
+</body>
+</html>

@@ -18,7 +18,7 @@ function sum(){
 		
 	}
 
-	repeatSum.valueOf= function(){
+	repeatSum.prototype.valueOf= function(){
 		return result;
 	}
 	return repeatSum;
