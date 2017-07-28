@@ -1,11 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import LeftPane from '../leftPane/leftPane';
+import RightPane from '../rightPane/rightPane';
 
 class About extends React.Component{
     render(){
         return (
-            <div>
-               About Page
+            <div className="body">
+               <LeftPane items={["About Us"]} match={this.props.match}/>
+               <RightPane match={this.props.match}/>
             </div>
         );
     }

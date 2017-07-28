@@ -9,7 +9,7 @@ const Header= (props) => {
                     <img src= "images/react.png"/>
                 </div>
                 <ul className="nav navbar-nav">
-                    <li className="active"><Link to={`/home`}>Home</Link></li>
+                    <li><Link to={`/home`}>Home</Link></li>
                     <li><Link to={`/about`}>About Us</Link></li>
                     <li><Link to={`/contact`}>Contact Us</Link></li>
                 </ul>

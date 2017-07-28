@@ -7,7 +7,7 @@ class Home extends React.Component{
 
     render(){
         return (
-            <div>
+            <div className="body">
                <LeftPane items={["Introduction","Conclusion"]} match={this.props.match}/>
                <RightPane match={this.props.match}/>
             </div>

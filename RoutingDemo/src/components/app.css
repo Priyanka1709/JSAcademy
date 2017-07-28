@@ -1,1 +1,18 @@
-.app
+.app .body{
+    height: 400px;
+}
+.app .leftPane{
+    float: left;
+    border-right: 1px solid lightgray;
+}
+.app section{
+    width: 50%;
+    height: 100%;
+}
+.app .rightPane{
+    float: right;
+}
+.app footer{
+    position:relative;
+    top: 0px;
+}

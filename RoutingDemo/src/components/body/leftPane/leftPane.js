@@ -3,7 +3,7 @@ import ListItem from "./listItem";
 
 const LeftPane = (props) => {
     return (
-        <section>
+        <section className="leftPane">
             <ul>
                 {
                     props.items.map((value, index) => 

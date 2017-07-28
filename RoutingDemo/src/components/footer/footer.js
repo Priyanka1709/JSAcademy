@@ -3,7 +3,8 @@ import React from "react";
 const Footer= (props) => {
     return (
         <footer>
-            Copyright @ saxobank.com
+            <p>All rights reserved</p>
+            <p>Copyright @Saxo Bank</p>
         </footer>
     );
 }

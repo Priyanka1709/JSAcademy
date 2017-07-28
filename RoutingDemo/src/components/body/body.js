@@ -1,7 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import Home from "./home/home";
 import About from "./about/about";
+import Contact from "./contact/contact";
 
 class Body extends React.Component{
 
@@ -11,10 +12,12 @@ class Body extends React.Component{
    
     render(){
         return (
-            <div>
+            <Switch>
                 <Route path={`/home`} component={Home}/>
                 <Route path={`/about`} component={About}/>
-            </div>
+                <Route path={`/contact`} component={Contact}/>
+                <Redirect exact path={`/`} to={`/home`}/>
+            </Switch>
         );
     }
 }
