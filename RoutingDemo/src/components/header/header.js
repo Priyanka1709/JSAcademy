@@ -10,8 +10,8 @@ const Header= (props) => {
                 </div>
                 <ul className="nav navbar-nav">
                     <li><Link to={`/home`}>Home</Link></li>
-                    <li><Link to={`/about`}>About Us</Link></li>
-                    <li><Link to={`/contact`}>Contact Us</Link></li>
+                    <li><Link to={`/community`}>Community</Link></li>
+                    <li><Link to={`/docs`}>Docs</Link></li>
                 </ul>
             </nav>
         </header>

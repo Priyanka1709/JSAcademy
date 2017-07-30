@@ -1,8 +1,8 @@
 import React from "react";
 import { Redirect, Route, Switch } from 'react-router-dom';
 import Home from "./home/home";
-import About from "./about/about";
-import Contact from "./contact/contact";
+import Community from "./community/community";
+import Docs from "./docs/docs";
 
 class Body extends React.Component{
 
@@ -14,8 +14,8 @@ class Body extends React.Component{
         return (
             <Switch>
                 <Route path={`/home`} component={Home}/>
-                <Route path={`/about`} component={About}/>
-                <Route path={`/contact`} component={Contact}/>
+                <Route path={`/community`} component={Community}/>
+                <Route path={`/docs`} component={Docs}/>
                 <Redirect exact path={`/`} to={`/home`}/>
             </Switch>
         );

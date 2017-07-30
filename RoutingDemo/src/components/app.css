@@ -15,4 +15,7 @@
 .app footer{
     position:relative;
     top: 0px;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    height:100px;
 }
