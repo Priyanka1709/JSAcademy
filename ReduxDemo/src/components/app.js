@@ -11,14 +11,22 @@ class App extends React.Component{
     render(){
         return (
             <div>
-                <div id= "state_container">{this.props.counter}</div>
-                <br/>
-                <button onClick={this.props.increase}>Increase</button>
-                <button onClick={this.props.increaseAsync}>Increase Async</button>
-                <button onClick={this.props.increaseAsyncUsingThunk}>Increase Async Thunk</button>
-                <button onClick={this.props.increaseAsyncUsingSaga}>Increase Async Saga</button>
-                <button onClick={this.props.decrease}>Decrease</button>
-                <button onClick={this.props.reset}>Reset</button>
+                <div id= "state_container" className="form-control">{this.props.counter}</div>
+                <div className="buttonArea">
+                    <button className="btn" onClick={this.props.increase}>Increase</button>
+                    <br/><br/>
+                    <button className="btn" onClick={this.props.increaseAsync}>Increase Async</button>
+                    <br/><br/>
+                    <button className="btn" onClick={this.props.increaseAsyncUsingThunk}>Increase Async Thunk</button>
+                    <br/><br/>
+                    <button className="btn" onClick={this.props.increaseAsyncUsingSaga}>Increase Async Saga</button>
+                    <br/><br/>
+                    <button className="btn" onClick={this.props.decrease}>Decrease</button>
+                    <br/><br/>
+                    <button className="btn" onClick={this.props.reset}>Reset</button>
+                    <br/><br/>
+                    <button disabled={this.props.btnState} className="btn btn-primary" onClick={this.props.getData}>Get Data</button>
+                </div>
             </div>
         )
     }

@@ -24,6 +24,12 @@ export function IncrementAsync(){
 	}
 }
 
+export function GetData(){
+	return {
+		type: actionTypes.FETCH_DATA
+	}
+}
+
 function Async(){
 	return new Promise(function(resolve, reject){
 		setTimeout(function(){

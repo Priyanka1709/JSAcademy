@@ -8,3 +8,5 @@ ReactDemo/node_modules/
 RoutingDemo/node_modules/
 ReduxDemo/node_modules/
 ReduxDemo/.idea/
+ReactTesting/node_modules/
+ReactTesting/src/components/__snapshots__/

@@ -5,7 +5,8 @@ import App from "./app";
 
 const mapStateToProps = state => {
     return {
-        counter: state.state.counter
+        counter: state.state.counter,
+        fetching: state.state.fetching
     }
 }
 
@@ -19,6 +20,7 @@ const mapDispatchToProps= dispatch => {
         },2000),
         increaseAsyncUsingThunk: ()=> dispatch(stateActions.startIncrementAsync()),
         increaseAsyncUsingSaga: ()=> dispatch(stateActions.IncrementAsync()),
+        getData: ()=> dispatch(stateActions.GetData()),
     }
 }
 
@@ -26,7 +28,7 @@ class AppContainer extends React.Component{
    
     render(){
         return (
-           <App counter={this.props.counter} increaseAsyncUsingThunk= {this.props.increaseAsyncUsingThunk} increaseAsyncUsingSaga={this.props.increaseAsyncUsingSaga} increaseAsync={this.props.increaseAsync} increase={this.props.increase} decrease= {this.props.decrease} reset={this.props.reset}/>
+           <App counter={this.props.counter} increaseAsyncUsingThunk= {this.props.increaseAsyncUsingThunk} increaseAsyncUsingSaga={this.props.increaseAsyncUsingSaga} increaseAsync={this.props.increaseAsync} increase={this.props.increase} decrease= {this.props.decrease} btnState={this.props.fetching} getData={this.props.getData} reset={this.props.reset}/>
         )
     }
 }
